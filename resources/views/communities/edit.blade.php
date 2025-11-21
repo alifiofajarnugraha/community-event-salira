@@ -1,9 +1,12 @@
 @extends('layouts.tailwind-app')
 
 @section('content')
-    <div class="mb-6 space-y-2">
-        <h1 class="text-3xl font-semibold text-gray-800">Edit Community</h1>
-        <p class="text-gray-600">Perbarui profil komunitas dan unggah logo terbaru.</p>
+    <div class="mb-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div class="space-y-2">
+            <h1 class="text-3xl font-semibold text-gray-800">Edit Community</h1>
+            <p class="text-gray-600">Perbarui profil komunitas dan unggah logo terbaru.</p>
+        </div>
+        <a href="{{ route('landing') }}" class="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-100 transition self-start">Landing Page</a>
     </div>
 
     <form action="{{ route('communities.update', $community) }}" method="POST" enctype="multipart/form-data" class="bg-white rounded-xl shadow p-6 md:p-8 space-y-6">

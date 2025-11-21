@@ -1,8 +1,11 @@
 @extends('layouts.tailwind-app')
 
 @section('content')
-    <div class="flex items-center justify-between mb-6">
-        <h1 class="text-2xl font-semibold text-gray-800">Communities</h1>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
+        <div class="flex items-center gap-3">
+            <h1 class="text-2xl font-semibold text-gray-800">Communities</h1>
+            <a href="{{ route('landing') }}" class="px-4 py-2 border border-gray-300 text-gray-600 rounded shadow-sm hover:bg-gray-100 transition">Landing Page</a>
+        </div>
         <a href="{{ route('communities.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded shadow">Create Community</a>
     </div>
 
