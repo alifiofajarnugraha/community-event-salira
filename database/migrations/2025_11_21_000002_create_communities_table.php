@@ -9,10 +9,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('communities', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->uuid('id')->primary();
+            $table->string('name', 100);
+            $table->foreignUuid('creator_id')->constrained('users')->cascadeOnDelete();
             $table->text('description')->nullable();
             $table->string('logo')->nullable();
+            $table->json('tags')->nullable();
             $table->timestamps();
         });
     }
