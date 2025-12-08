@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, \Illuminate\Database\Eloquent\Concerns\HasUuids;
 
     /**
      * The attributes that are mass assignable.
@@ -44,5 +44,14 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function communities()
+    {
+        return $this->hasMany(Community::class, 'creator_id');
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'organizer_id');
     }
 }

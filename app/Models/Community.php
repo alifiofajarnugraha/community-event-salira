@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Community extends Model
 {
-    use HasFactory;
+    use HasFactory, \Illuminate\Database\Eloquent\Concerns\HasUuids;
 
     protected $fillable = [
         'name',
@@ -43,4 +43,17 @@ class Community extends Model
         'moderators' => 'array',
         'rules' => 'array',
     ];
+
+    protected $casts = [
+        'tags' => 'array',
+    ];
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'creator_id');
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }
