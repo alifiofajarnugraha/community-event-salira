@@ -20,7 +20,7 @@
             <div class="bg-white rounded-xl shadow overflow-hidden flex flex-col">
                 <div class="h-40 bg-gray-200">
                     @if($event->image)
-                        <img src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->title }} image" class="w-full h-full object-cover">
+                        <img src="{{ $event->image }}" alt="{{ $event->title }} image" class="w-full h-full object-cover">
                     @else
                         <div class="flex items-center justify-center h-full text-gray-400 text-sm">Belum ada gambar</div>
                     @endif
@@ -28,12 +28,30 @@
                 <div class="p-5 flex flex-col gap-3 flex-1">
                     <div>
                         <h2 class="text-xl font-semibold text-gray-800">{{ $event->title }}</h2>
-                        <p class="text-sm text-gray-500">{{ optional($event->start_date)->format('d M Y H:i') }} &ndash; {{ optional($event->end_date)->format('d M Y H:i') }}</p>
+                        @if($event->subtitle)
+                            <p class="text-sm text-gray-600 italic">{{ $event->subtitle }}</p>
+                        @endif
+                        <p class="text-sm text-gray-500">{{ optional($event->date)->format('d M Y H:i') }}</p>
+                        @if($event->category)
+                            <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full mt-1">{{ $event->category }}</span>
+                        @endif
                     </div>
                     <p class="text-gray-600 text-sm flex-1">{{ $event->description ? \Illuminate\Support\Str::limit($event->description, 120) : 'Deskripsi belum tersedia.' }}</p>
                     <div class="text-sm text-gray-500">
                         <span class="font-medium text-gray-700">Lokasi:</span> {{ $event->location ?? 'Belum ditentukan' }}
                     </div>
+                    @if($event->community_name)
+                        <div class="text-sm text-gray-500">
+                            <span class="font-medium text-gray-700">Komunitas:</span> {{ $event->community_name }}
+                        </div>
+                    @endif
+                    @if($event->tags && count($event->tags) > 0)
+                        <div class="flex flex-wrap gap-1 mt-2">
+                            @foreach($event->tags as $tag)
+                                <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">{{ $tag }}</span>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
                 <div class="px-5 pb-5 flex items-center gap-3">
                     <a href="{{ route('events.edit', $event) }}" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">Edit</a>

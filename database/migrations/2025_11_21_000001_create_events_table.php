@@ -11,11 +11,15 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->string('community_id')->nullable();
+            $table->string('community_name')->nullable();
+            $table->dateTime('date');
             $table->string('location')->nullable();
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
             $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->string('category')->nullable();
+            $table->json('tags')->nullable();
             $table->timestamps();
         });
     }

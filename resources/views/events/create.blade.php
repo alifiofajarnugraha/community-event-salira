@@ -17,31 +17,52 @@
             @error('title')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
         </div>
         <div class="space-y-1">
-            <label class="block text-sm font-medium text-gray-700">Description</label>
-            <textarea name="description" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ceritakan event yang akan berlangsung">{{ old('description') }}</textarea>
-            @error('description')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+            <label class="block text-sm font-medium text-gray-700">Subtitle</label>
+            <input type="text" name="subtitle" value="{{ old('subtitle') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Subtitle event">
+            @error('subtitle')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-1">
+                <label class="block text-sm font-medium text-gray-700">Community ID</label>
+                <input type="text" name="community_id" value="{{ old('community_id') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="ID komunitas">
+                @error('community_id')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+            </div>
+            <div class="space-y-1">
+                <label class="block text-sm font-medium text-gray-700">Community Name</label>
+                <input type="text" name="community_name" value="{{ old('community_name') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Nama komunitas">
+                @error('community_name')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+            </div>
+        </div>
+        <div class="space-y-1">
+            <label class="block text-sm font-medium text-gray-700">Date</label>
+            <input type="datetime-local" name="date" value="{{ old('date') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+            @error('date')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
         </div>
         <div class="space-y-1">
             <label class="block text-sm font-medium text-gray-700">Location</label>
             <input type="text" name="location" value="{{ old('location') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Lokasi penyelenggaraan">
             @error('location')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="space-y-1">
-                <label class="block text-sm font-medium text-gray-700">Start Date</label>
-                <input type="datetime-local" name="start_date" value="{{ old('start_date') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
-                @error('start_date')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
-            </div>
-            <div class="space-y-1">
-                <label class="block text-sm font-medium text-gray-700">End Date</label>
-                <input type="datetime-local" name="end_date" value="{{ old('end_date') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
-                @error('end_date')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
-            </div>
+        <div class="space-y-1">
+            <label class="block text-sm font-medium text-gray-700">Image URL</label>
+            <input type="url" name="image" value="{{ old('image') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="https://example.com/image.jpg">
+            @error('image')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
         </div>
         <div class="space-y-1">
-            <label class="block text-sm font-medium text-gray-700">Image</label>
-            <input type="file" name="image" class="w-full rounded-lg border border-dashed border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
-            @error('image')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+            <label class="block text-sm font-medium text-gray-700">Description</label>
+            <textarea name="description" rows="4" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ceritakan event yang akan berlangsung">{{ old('description') }}</textarea>
+            @error('description')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+        </div>
+        <div class="space-y-1">
+            <label class="block text-sm font-medium text-gray-700">Category</label>
+            <input type="text" name="category" value="{{ old('category') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Kategori event">
+            @error('category')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
+        </div>
+        <div class="space-y-1">
+            <label class="block text-sm font-medium text-gray-700">Tags</label>
+            <input type="text" name="tags_input" value="{{ old('tags_input') }}" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Tag1, Tag2, Tag3">
+            <p class="text-sm text-gray-500">Pisahkan tags dengan koma</p>
+            @error('tags')<p class="text-sm text-red-600 mt-1">{{ $message }}</p>@enderror
         </div>
         <div class="flex flex-col sm:flex-row sm:justify-end gap-3">
             <a href="{{ route('events.index') }}" class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 text-center hover:bg-gray-100 transition">Cancel</a>

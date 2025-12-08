@@ -11,15 +11,19 @@ class Event extends Model
 
     protected $fillable = [
         'title',
-        'description',
+        'subtitle',
+        'community_id',
+        'community_name',
+        'date',
         'location',
-        'start_date',
-        'end_date',
         'image',
+        'description',
+        'category',
+        'tags',
     ];
 
     protected $casts = [
-        'start_date' => 'datetime',
-        'end_date' => 'datetime',
+        'date' => 'datetime',
+        'tags' => 'array',
     ];
 }

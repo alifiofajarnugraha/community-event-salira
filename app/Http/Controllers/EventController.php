@@ -28,9 +28,13 @@ class EventController extends Controller
     public function store(StoreEventRequest $request)
     {
         $data = $request->validated();
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('events', 'public');
+        
+        // Process tags from comma-separated input
+        if ($request->has('tags_input')) {
+            $tags = array_filter(array_map('trim', explode(',', $request->tags_input)));
+            $data['tags'] = $tags;
         }
+        
         Event::create($data);
 
         return redirect()->route('events.index')->with('status', 'Event created successfully');
@@ -44,12 +48,13 @@ class EventController extends Controller
     public function update(UpdateEventRequest $request, Event $event)
     {
         $data = $request->validated();
-        if ($request->hasFile('image')) {
-            if ($event->image) {
-                Storage::disk('public')->delete($event->image);
-            }
-            $data['image'] = $request->file('image')->store('events', 'public');
+        
+        // Process tags from comma-separated input
+        if ($request->has('tags_input')) {
+            $tags = array_filter(array_map('trim', explode(',', $request->tags_input)));
+            $data['tags'] = $tags;
         }
+        
         $event->update($data);
 
         return redirect()->route('events.index')->with('status', 'Event updated successfully');
@@ -57,9 +62,6 @@ class EventController extends Controller
 
     public function destroy(Event $event)
     {
-        if ($event->image) {
-            Storage::disk('public')->delete($event->image);
-        }
         $event->delete();
 
         return redirect()->route('events.index')->with('status', 'Event deleted successfully');
