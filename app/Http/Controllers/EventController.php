@@ -22,7 +22,7 @@ class EventController extends Controller
 
     public function show(Event $event)
     {
-        return view('events.edit', compact('event'));
+        return view('events.show', compact('event'));
     }
 
     public function store(StoreEventRequest $request)

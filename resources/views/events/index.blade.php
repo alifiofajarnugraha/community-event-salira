@@ -27,7 +27,9 @@
                 </div>
                 <div class="p-5 flex flex-col gap-3 flex-1">
                     <div>
-                        <h2 class="text-xl font-semibold text-gray-800">{{ $event->title }}</h2>
+                        <h2 class="text-xl font-semibold text-gray-800">
+                            <a href="{{ route('events.show', $event) }}" class="hover:text-blue-600 transition">{{ $event->title }}</a>
+                        </h2>
                         @if($event->subtitle)
                             <p class="text-sm text-gray-600 italic">{{ $event->subtitle }}</p>
                         @endif
@@ -53,7 +55,8 @@
                         </div>
                     @endif
                 </div>
-                <div class="px-5 pb-5 flex items-center gap-3">
+                <div class="px-5 pb-5 flex items-center gap-2">
+                    <a href="{{ route('events.show', $event) }}" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition">View</a>
                     <a href="{{ route('events.edit', $event) }}" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">Edit</a>
                     <form action="{{ route('events.destroy', $event) }}" method="POST" class="inline" onsubmit="return confirm('Delete this event?')">
                         @csrf

@@ -32,7 +32,9 @@
                                 @if($community->icon)
                                     <span class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs">{{ $community->icon }}</span>
                                 @endif
-                                <h2 class="text-lg font-semibold text-gray-800">{{ $community->name }}</h2>
+                                <h2 class="text-lg font-semibold text-gray-800">
+                                    <a href="{{ route('communities.show', $community) }}" class="hover:text-blue-600 transition">{{ $community->name }}</a>
+                                </h2>
                                 @if($community->is_joined)
                                     <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Joined</span>
                                 @endif
@@ -81,7 +83,8 @@
                         </div>
                     @endif
                 </div>
-                <div class="px-5 pb-5 flex items-center gap-3">
+                <div class="px-5 pb-5 flex items-center gap-2">
+                    <a href="{{ route('communities.show', $community) }}" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition">View</a>
                     <a href="{{ route('communities.edit', $community) }}" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">Edit</a>
                     <form action="{{ route('communities.destroy', $community) }}" method="POST" class="inline" onsubmit="return confirm('Delete this community?')">
                         @csrf

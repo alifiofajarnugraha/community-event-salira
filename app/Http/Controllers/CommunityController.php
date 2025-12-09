@@ -22,7 +22,7 @@ class CommunityController extends Controller
 
     public function show(Community $community)
     {
-        return view('communities.edit', compact('community'));
+        return view('communities.show', compact('community'));
     }
 
     public function store(StoreCommunityRequest $request)
