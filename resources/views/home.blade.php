@@ -11,6 +11,9 @@
             <a href="{{ route('communities.index') }}" class="inline-flex items-center justify-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition">
                 Kelola Community
             </a>
+            <a href="{{ route('literatures.index') }}" class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition">
+                Kelola Literature
+            </a>
         </div>
     </div>
 @endsection
