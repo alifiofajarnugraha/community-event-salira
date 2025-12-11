@@ -546,390 +546,297 @@ class DatabaseSeeder extends Seeder
 
         $literatures = [
             [
-                'title' => 'Clean Code: A Handbook of Agile Software Craftsmanship',
-                'author' => 'Robert C. Martin',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293.jpg',
-                'rating' => 4.5,
-                'description' => "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way.",
-                'year_edition' => '2023 2nd Edition',
-                'total_bookmarked' => 3420,
-                'tags' => [
-                    ['name' => 'Software Engineering', 'type' => 'primary'],
-                    ['name' => 'Programming', 'type' => 'secondary'],
-                    ['name' => 'Best Practices', 'type' => 'secondary'],
-                    ['name' => 'Code Quality', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Physical paperback/hardcover edition available at retail locations',
-                        'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350884', 'type' => 'online_retailer', 'shipping_available' => true],
-                            ['name' => 'Barnes & Noble - Union Square', 'url' => 'https://www.barnesandnoble.com', 'maps_url' => 'https://maps.google.com/?q=Barnes+%26+Noble+Union+Square+NYC', 'address' => '33 E 17th St, New York, NY 10003', 'type' => 'bookstore_chain', 'phone' => '(212) 673-2155', 'real_time_inventory' => true],
-                            ['name' => 'The Strand Book Store', 'url' => 'https://www.strandbooks.com', 'maps_url' => 'https://maps.google.com/?q=The+Strand+Book+Store+NYC', 'address' => '828 Broadway, New York, NY 10003', 'type' => 'independent_bookstore', 'phone' => '(212) 473-1452', 'real_time_inventory' => false],
-                            ['name' => 'New York Public Library - Tech Collection', 'url' => 'https://nypl.org/locations/schwarzman', 'maps_url' => 'https://maps.google.com/?q=New+York+Public+Library+Main+Branch', 'address' => '476 5th Ave, New York, NY 10018', 'type' => 'public_library', 'phone' => '(917) 275-6975', 'real_time_inventory' => true],
-                            ['name' => 'MIT Library - Engineering Collection', 'url' => 'https://libraries.mit.edu/', 'maps_url' => 'https://maps.google.com/?q=MIT+Library+Cambridge+MA', 'address' => '77 Massachusetts Ave, Cambridge, MA 02139', 'type' => 'university_library', 'real_time_inventory' => true],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'Digital edition for online reading',
-                        'sources' => [
-                            ['name' => 'Amazon Kindle', 'url' => 'https://amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350884', 'type' => 'purchase'],
-                            ['name' => 'Google Books', 'url' => 'https://books.google.com/books?id=CpA5DwAAQBAJ', 'type' => 'preview'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Pay-to-own',
-                'sources' => [
-                    ['name' => 'IEEE Xplore', 'url' => 'https://ieeexplore.ieee.org/document/6196583'],
-                    ['name' => 'Springer', 'url' => 'https://link.springer.com/book/10.1007/978-0-13-597444-5'],
-                    ['name' => 'ACM Digital Library', 'url' => 'https://dl.acm.org/doi/10.5555/1413532'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/unclebobmartin/status/123456789', 'keyword' => 'Clean Code', 'generated_at' => '2023-10-01T12:00:00Z'],
-                    ['embed_url' => 'https://twitter.com/martinfowler/status/987654321', 'keyword' => 'Software Engineering', 'generated_at' => '2023-10-01T12:00:00Z'],
-                ],
-                'related_posts' => [1, 8],
-                'community_id' => 'literacy-circle',
-            ],
-            [
-                'title' => 'The Pragmatic Programmer: Your Journey to Mastery',
-                'author' => 'Andrew Hunt & David Thomas',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg',
-                'rating' => 4.8,
-                'description' => 'Classic guide for software developers focusing on practical techniques, continuous learning, and craftsmanship.',
-                'year_edition' => '20th Anniversary Edition',
-                'total_bookmarked' => 2980,
-                'tags' => [
-                    ['name' => 'Software Craftsmanship', 'type' => 'primary'],
-                    ['name' => 'Career Growth', 'type' => 'secondary'],
-                    ['name' => 'Best Practices', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Hardcover edition with updated content',
-                        'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052', 'type' => 'online_retailer', 'shipping_available' => true],
-                            ['name' => 'Waterstones London', 'url' => 'https://www.waterstones.com', 'address' => '203-206 Piccadilly, St. James\'s, London W1J 9HD', 'type' => 'bookstore_chain', 'phone' => '+44 20 7851 2400'],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'DRM-free ebook download',
-                        'sources' => [
-                            ['name' => 'Apple Books', 'url' => 'https://books.apple.com/us/book/the-pragmatic-programmer/id1483838938', 'type' => 'purchase'],
-                            ['name' => 'O\'Reilly Online Learning', 'url' => 'https://learning.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/', 'type' => 'subscription'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Commercial',
-                'sources' => [
-                    ['name' => 'Pearson', 'url' => 'https://www.pearson.com/us/higher-education/program/Hunt-Pragmatic-Programmer-The-20th-Anniversary-Edition-Your-Journey-to-Mastery-2nd-Edition/PGM2143617.html'],
-                    ['name' => 'O\'Reilly', 'url' => 'https://learning.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/pragprog/status/1123456789', 'keyword' => 'Pragmatic Programmer', 'generated_at' => '2024-02-10T08:30:00Z'],
-                ],
-                'related_posts' => [3, 12, 15],
-                'community_id' => 'craftsmanship-club',
-            ],
-            [
-                'title' => 'Refactoring: Improving the Design of Existing Code',
-                'author' => 'Martin Fowler',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/51k+e7V3RNL._SX396_BO1,204,203,200_.jpg',
-                'rating' => 4.6,
-                'description' => 'Detailed catalog of refactorings with real-world examples to improve code structure without changing behavior.',
-                'year_edition' => '2nd Edition',
-                'total_bookmarked' => 2565,
-                'tags' => [
-                    ['name' => 'Refactoring', 'type' => 'primary'],
-                    ['name' => 'Code Quality', 'type' => 'secondary'],
-                    ['name' => 'Architecture', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Hardcover with color illustrations and code samples',
-                        'sources' => [
-                            ['name' => 'Book Depository', 'url' => 'https://www.bookdepository.com/Refactoring-Martin-Fowler/9780134757599', 'type' => 'online_retailer', 'shipping_available' => true],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'Ebook in PDF and ePub formats',
-                        'sources' => [
-                            ['name' => 'InformIT', 'url' => 'https://www.informit.com/store/refactoring-improving-the-design-of-existing-code-9780134757599', 'type' => 'purchase'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Pay-to-own',
-                'sources' => [
-                    ['name' => 'Addison-Wesley', 'url' => 'https://www.informit.com/store/refactoring-improving-the-design-of-existing-code-9780134757599'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/martinfowler/status/1356789012', 'keyword' => 'Refactoring', 'generated_at' => '2024-01-18T15:00:00Z'],
-                ],
-                'related_posts' => [5, 11],
-                'community_id' => 'architecture-guild',
-            ],
-            [
-                'title' => 'Design Patterns: Elements of Reusable Object-Oriented Software',
-                'author' => 'Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/51kuc0iWoKL._SX396_BO1,204,203,200_.jpg',
-                'rating' => 4.4,
-                'description' => 'Seminal catalog of object-oriented design patterns that established a common vocabulary for software engineers.',
-                'year_edition' => '2019 Reprint',
-                'total_bookmarked' => 1890,
-                'tags' => [
-                    ['name' => 'Design Patterns', 'type' => 'primary'],
-                    ['name' => 'Object-Oriented Programming', 'type' => 'secondary'],
-                    ['name' => 'Architecture', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Trade paperback reprint',
-                        'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612', 'type' => 'online_retailer', 'shipping_available' => true],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'Digital scan with searchable text',
-                        'sources' => [
-                            ['name' => 'Safari Books Online', 'url' => 'https://learning.oreilly.com/library/view/design-patterns-elements/0201633612/', 'type' => 'subscription'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Commercial',
-                'sources' => [
-                    ['name' => 'Pearson', 'url' => 'https://www.pearson.com/en-us/subject-catalog/p/design-patterns-elements-of-reusable-object-oriented-software/P200000004602/9780201633610'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/gof_design/status/1234098765', 'keyword' => 'Design Patterns', 'generated_at' => '2023-11-02T10:45:00Z'],
-                ],
-                'related_posts' => [2, 7, 19],
-                'community_id' => 'oop-forum',
-            ],
-            [
-                'title' => 'Accelerate: The Science of DevOps and Building High Performing Technology Organizations',
-                'author' => 'Nicole Forsgren, Jez Humble, Gene Kim',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/41sZk2pWcSL._SX331_BO1,204,203,200_.jpg',
-                'rating' => 4.7,
-                'description' => 'Groundbreaking research on the practices and capabilities that drive high-performing technology teams.',
-                'year_edition' => '2018 Edition',
-                'total_bookmarked' => 2215,
-                'tags' => [
-                    ['name' => 'DevOps', 'type' => 'primary'],
-                    ['name' => 'Engineering Culture', 'type' => 'secondary'],
-                    ['name' => 'Metrics', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Paperback edition',
-                        'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339', 'type' => 'online_retailer', 'shipping_available' => true],
-                            ['name' => 'Powell\'s City of Books', 'url' => 'https://www.powells.com', 'address' => '1005 W Burnside St, Portland, OR 97209', 'type' => 'independent_bookstore', 'phone' => '(800) 878-7323'],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'Kindle and ePub formats',
-                        'sources' => [
-                            ['name' => 'Kindle Store', 'url' => 'https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations-ebook/dp/B07B9F83WM', 'type' => 'purchase'],
-                            ['name' => 'Kobo', 'url' => 'https://www.kobo.com/us/en/ebook/accelerate-the-science-of-lean-software-and-devops', 'type' => 'purchase'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Pay-to-own',
-                'sources' => [
-                    ['name' => 'IT Revolution', 'url' => 'https://itrevolution.com/product/accelerate/'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/nicolefv/status/1181234567', 'keyword' => 'Accelerate Book', 'generated_at' => '2023-09-12T14:00:00Z'],
-                ],
-                'related_posts' => [4, 9, 16],
-                'community_id' => 'devops-chapter',
-            ],
-            [
-                'title' => 'Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation',
-                'author' => 'Jez Humble & David Farley',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/51tW-UJVvML._SX396_BO1,204,203,200_.jpg',
-                'rating' => 4.3,
-                'description' => 'Comprehensive guide for implementing continuous delivery pipelines and deployment automation.',
-                'year_edition' => '2010 Edition',
-                'total_bookmarked' => 1735,
-                'tags' => [
-                    ['name' => 'Continuous Delivery', 'type' => 'primary'],
-                    ['name' => 'Automation', 'type' => 'secondary'],
-                    ['name' => 'DevOps', 'type' => 'secondary'],
-                ],
-                'copy_types' => [
-                    'Physical' => [
-                        'description' => 'Paperback edition for reference libraries',
-                        'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912', 'type' => 'online_retailer', 'shipping_available' => true],
-                        ],
-                    ],
-                    'Digital' => [
-                        'description' => 'PDF and ePub formats available globally',
-                        'sources' => [
-                            ['name' => 'InformIT', 'url' => 'https://www.informit.com/store/continuous-delivery-reliable-software-releases-through-9780321601919', 'type' => 'purchase'],
-                        ],
-                    ],
-                ],
-                'licensing_type' => 'Commercial',
-                'sources' => [
-                    ['name' => 'Pearson', 'url' => 'https://www.pearson.com/us/higher-education/program/Humble-Continuous-Delivery-Reliable-Software-Releases-through-Build-Test-and-Deployment-Automation/PGM2069560.html'],
-                ],
-                'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/jez_humble/status/1298374654', 'keyword' => 'Continuous Delivery', 'generated_at' => '2024-03-05T17:20:00Z'],
-                ],
-                'related_posts' => [6, 13],
-                'community_id' => 'delivery-guild',
-            ],
-            [
-                'title' => 'Domain-Driven Design: Tackling Complexity in the Heart of Software',
-                'author' => 'Eric Evans',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/41ml2Z6XtwL._SX396_BO1,204,203,200_.jpg',
+                'title' => 'Matematika SMA Kelas XII',
+                'author' => 'M. Cholik Adinawan & Sugijono',
+                'cover' => 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=600&fit=crop',
                 'rating' => 4.2,
-                'description' => 'Blueprint for creating rich domain models and aligning software with business strategy.',
-                'year_edition' => 'Anniversary Edition',
-                'total_bookmarked' => 2044,
+                'description' => 'Buku matematika untuk kelas XII SMA yang membahas materi kalkulus, statistika, dan peluang. Dilengkapi dengan contoh soal dan pembahasan yang mudah dipahami.',
+                'year_edition' => 'Edisi Revisi 2024',
+                'total_bookmarked' => 1850,
                 'tags' => [
-                    ['name' => 'Domain-Driven Design', 'type' => 'primary'],
-                    ['name' => 'Architecture', 'type' => 'secondary'],
-                    ['name' => 'Business Alignment', 'type' => 'secondary'],
+                    ['name' => 'Matematika', 'type' => 'primary'],
+                    ['name' => 'Kalkulus', 'type' => 'secondary'],
+                    ['name' => 'Statistika', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
                 ],
                 'copy_types' => [
                     'Physical' => [
-                        'description' => 'Hardcover reference edition',
+                        'description' => 'Buku cetak tersedia di toko buku dan perpustakaan sekolah',
                         'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215', 'type' => 'online_retailer', 'shipping_available' => true],
+                            ['name' => 'Gramedia', 'url' => 'https://www.gramedia.com', 'type' => 'bookstore', 'shipping_available' => true],
+                            ['name' => 'Toko Buku Gunung Agung', 'url' => 'https://www.gunungagungshop.com', 'type' => 'bookstore', 'shipping_available' => true],
+                            ['name' => 'Perpustakaan Sekolah', 'type' => 'library'],
                         ],
                     ],
                     'Digital' => [
-                        'description' => 'Searchable PDF via publisher',
+                        'description' => 'E-book tersedia melalui platform pembelajaran digital',
                         'sources' => [
-                            ['name' => 'Safari Books Online', 'url' => 'https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/', 'type' => 'subscription'],
+                            ['name' => 'Buku Sekolah Elektronik (BSE)', 'url' => 'https://bse.kemdikbud.go.id', 'type' => 'free_access'],
+                            ['name' => 'Rumah Belajar Kemdikbud', 'url' => 'https://belajar.kemdikbud.go.id', 'type' => 'free_access'],
                         ],
                     ],
                 ],
-                'licensing_type' => 'Commercial',
+                'licensing_type' => 'Educational',
                 'sources' => [
-                    ['name' => 'Addison-Wesley', 'url' => 'https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217'],
+                    ['name' => 'Kementerian Pendidikan dan Kebudayaan', 'url' => 'https://www.kemdikbud.go.id'],
+                    ['name' => 'Pusat Perbukuan Kemdikbud', 'url' => 'https://perbukuan.kemdikbud.go.id'],
                 ],
                 'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/dddcommunity/status/1109876543', 'keyword' => 'DDD', 'generated_at' => '2024-04-22T11:15:00Z'],
+                    ['embed_url' => 'https://twitter.com/kemdikbud_ri/status/1234567890', 'keyword' => 'Matematika SMA', 'generated_at' => '2024-09-15T10:00:00Z'],
                 ],
-                'related_posts' => [10, 18],
-                'community_id' => 'ddd-society',
+                'related_posts' => [1, 3, 5],
+                'community_id' => 'sma-learning',
             ],
             [
-                'title' => 'Clean Architecture: A Craftsman\'s Guide to Software Structure and Design',
-                'author' => 'Robert C. Martin',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL._SX382_BO1,204,203,200_.jpg',
-                'rating' => 4.1,
-                'description' => 'Guidelines and principles for designing robust, maintainable software architectures.',
-                'year_edition' => '2017 Edition',
-                'total_bookmarked' => 1876,
+                'title' => 'Bahasa Indonesia SMA Kelas XI',
+                'author' => 'Suherli, dkk',
+                'cover' => 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop',
+                'rating' => 4.0,
+                'description' => 'Buku pelajaran Bahasa Indonesia untuk kelas XI yang mengembangkan kemampuan berbahasa dan bersastra siswa. Memuat materi teks eksplanasi, proposal, dan karya ilmiah.',
+                'year_edition' => 'Kurikulum Merdeka 2024',
+                'total_bookmarked' => 1420,
                 'tags' => [
-                    ['name' => 'Architecture', 'type' => 'primary'],
-                    ['name' => 'Clean Code', 'type' => 'secondary'],
-                    ['name' => 'SOLID Principles', 'type' => 'secondary'],
+                    ['name' => 'Bahasa Indonesia', 'type' => 'primary'],
+                    ['name' => 'Sastra', 'type' => 'secondary'],
+                    ['name' => 'Teks Eksplanasi', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
                 ],
                 'copy_types' => [
                     'Physical' => [
-                        'description' => 'Softcover with diagrams',
+                        'description' => 'Buku cetak resmi Kemdikbud',
                         'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164', 'type' => 'online_retailer', 'shipping_available' => true],
+                            ['name' => 'Gramedia', 'url' => 'https://www.gramedia.com', 'type' => 'bookstore', 'shipping_available' => true],
+                            ['name' => 'Perpustakaan Daerah', 'type' => 'public_library'],
                         ],
                     ],
                     'Digital' => [
-                        'description' => 'eBook with code samples',
+                        'description' => 'Tersedia dalam format PDF dan ePub',
                         'sources' => [
-                            ['name' => 'Google Play Books', 'url' => 'https://play.google.com/store/books/details/Robert_C_Martin_Clean_Architecture?id=7Zl0DQAAQBAJ', 'type' => 'purchase'],
+                            ['name' => 'BSE Kemdikbud', 'url' => 'https://bse.kemdikbud.go.id', 'type' => 'free_access'],
                         ],
                     ],
                 ],
-                'licensing_type' => 'Commercial',
+                'licensing_type' => 'Open Educational Resource',
                 'sources' => [
-                    ['name' => 'Pearson', 'url' => 'https://www.pearson.com/us/higher-education/program/Martin-Clean-Architecture-A-Craftsman-s-Guide-to-Software-Structure-and-Design/PGM2750768.html'],
+                    ['name' => 'Kementerian Pendidikan dan Kebudayaan', 'url' => 'https://www.kemdikbud.go.id'],
                 ],
                 'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/unclebobmartin/status/1405678912', 'keyword' => 'Clean Architecture', 'generated_at' => '2024-05-14T09:40:00Z'],
+                    ['embed_url' => 'https://twitter.com/kemdikbud_ri/status/1234567891', 'keyword' => 'Bahasa Indonesia', 'generated_at' => '2024-08-20T14:30:00Z'],
                 ],
-                'related_posts' => [14, 20],
-                'community_id' => 'architecture-guild',
+                'related_posts' => [2, 4],
+                'community_id' => 'bahasa-indonesia-sma',
             ],
             [
-                'title' => 'Working Effectively with Legacy Code',
-                'author' => 'Michael Feathers',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/51l8nUD5KPL._SX379_BO1,204,203,200_.jpg',
+                'title' => 'Fisika SMA Kelas X',
+                'author' => 'Marthen Kanginan',
+                'cover' => 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=400&h=600&fit=crop',
                 'rating' => 4.4,
-                'description' => 'Strategies and techniques for adding features and improving designs in legacy codebases safely.',
-                'year_edition' => '2005 Edition',
-                'total_bookmarked' => 1650,
+                'description' => 'Buku fisika yang membahas konsep-konsep dasar fisika untuk kelas X. Meliputi kinematika, dinamika, usaha dan energi, serta momentum dan impuls.',
+                'year_edition' => 'Edisi 2024',
+                'total_bookmarked' => 2100,
                 'tags' => [
-                    ['name' => 'Legacy Code', 'type' => 'primary'],
-                    ['name' => 'Testing', 'type' => 'secondary'],
-                    ['name' => 'Refactoring', 'type' => 'secondary'],
+                    ['name' => 'Fisika', 'type' => 'primary'],
+                    ['name' => 'Kinematika', 'type' => 'secondary'],
+                    ['name' => 'Dinamika', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
                 ],
                 'copy_types' => [
                     'Physical' => [
-                        'description' => 'Paperback edition',
+                        'description' => 'Buku cetak dengan ilustrasi dan diagram lengkap',
                         'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052', 'type' => 'online_retailer', 'shipping_available' => true],
+                            ['name' => 'Erlangga', 'url' => 'https://www.erlangga.co.id', 'type' => 'publisher', 'shipping_available' => true],
+                            ['name' => 'Toko Buku Fisika', 'type' => 'specialty_store'],
                         ],
                     ],
                     'Digital' => [
-                        'description' => 'PDF via subscription service',
+                        'description' => 'E-book interaktif dengan simulasi',
                         'sources' => [
-                            ['name' => 'Safari Books Online', 'url' => 'https://learning.oreilly.com/library/view/working-effectively-with/0131177052/', 'type' => 'subscription'],
+                            ['name' => 'Platform Erlangga Digital', 'url' => 'https://digital.erlangga.co.id', 'type' => 'subscription'],
                         ],
                     ],
                 ],
                 'licensing_type' => 'Commercial',
                 'sources' => [
-                    ['name' => 'Pearson', 'url' => 'https://www.pearson.com/us/higher-education/program/Feathers-Working-Effectively-with-Legacy-Code/PGM289283.html'],
+                    ['name' => 'Penerbit Erlangga', 'url' => 'https://www.erlangga.co.id'],
                 ],
                 'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/michaelfeathers/status/1212345678', 'keyword' => 'Legacy Code', 'generated_at' => '2023-12-19T13:25:00Z'],
+                    ['embed_url' => 'https://twitter.com/erlangga_id/status/1234567892', 'keyword' => 'Fisika SMA', 'generated_at' => '2024-07-10T16:45:00Z'],
                 ],
-                'related_posts' => [21, 22],
-                'community_id' => 'legacy-squad',
+                'related_posts' => [6, 7],
+                'community_id' => 'sains-sma',
             ],
             [
-                'title' => 'Site Reliability Engineering: How Google Runs Production Systems',
-                'author' => 'Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy',
-                'cover' => 'https://images-na.ssl-images-amazon.com/images/I/51u0XZQZ0HL._SX379_BO1,204,203,200_.jpg',
-                'rating' => 4.5,
-                'description' => 'Collection of essays detailing Google\'s approach to running reliable, scalable production services.',
-                'year_edition' => '1st Edition',
-                'total_bookmarked' => 2320,
+                'title' => 'Kimia SMA Kelas XI',
+                'author' => 'Michael Purba',
+                'cover' => 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=400&h=600&fit=crop',
+                'rating' => 4.1,
+                'description' => 'Buku kimia yang membahas struktur atom, ikatan kimia, termokimia, dan kinetika kimia. Dilengkapi dengan eksperimen dan aplikasi dalam kehidupan sehari-hari.',
+                'year_edition' => 'Edisi Revisi 2024',
+                'total_bookmarked' => 1680,
                 'tags' => [
-                    ['name' => 'SRE', 'type' => 'primary'],
-                    ['name' => 'Reliability', 'type' => 'secondary'],
-                    ['name' => 'Operations', 'type' => 'secondary'],
+                    ['name' => 'Kimia', 'type' => 'primary'],
+                    ['name' => 'Struktur Atom', 'type' => 'secondary'],
+                    ['name' => 'Ikatan Kimia', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
                 ],
                 'copy_types' => [
                     'Physical' => [
-                        'description' => 'Printed edition for reference',
+                        'description' => 'Buku cetak dengan tabel periodik terlengkap',
                         'sources' => [
-                            ['name' => 'Amazon', 'url' => 'https://www.amazon.com/Site-Reliability-Engineering-Production-Systems/dp/149192912X', 'type' => 'online_retailer', 'shipping_available' => true],
-                            ['name' => 'Google Store', 'url' => 'https://sre.google/books', 'type' => 'publisher'],
+                            ['name' => 'Erlangga', 'url' => 'https://www.erlangga.co.id', 'type' => 'publisher', 'shipping_available' => true],
+                            ['name' => 'Lab Kimia Sekolah', 'type' => 'school_lab'],
+                        ],
+                    ],
+                ],
+                'licensing_type' => 'Commercial',
+                'sources' => [
+                    ['name' => 'Penerbit Erlangga', 'url' => 'https://www.erlangga.co.id'],
+                ],
+                'twitter_embeds' => [
+                    ['embed_url' => 'https://twitter.com/kimia_sma/status/1234567893', 'keyword' => 'Kimia SMA', 'generated_at' => '2024-06-25T11:20:00Z'],
+                ],
+                'related_posts' => [8, 9],
+                'community_id' => 'sains-sma',
+            ],
+            [
+                'title' => 'Biologi SMA Kelas XII',
+                'author' => 'Campbell, dkk (Adaptasi Indonesia)',
+                'cover' => 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=600&fit=crop',
+                'rating' => 4.3,
+                'description' => 'Buku biologi komprehensif yang membahas genetika, evolusi, ekologi, dan bioteknologi. Disertai dengan gambar ilustrasi dan foto mikroskopis yang jelas.',
+                'year_edition' => 'Adaptasi Kurikulum Indonesia 2024',
+                'total_bookmarked' => 1950,
+                'tags' => [
+                    ['name' => 'Biologi', 'type' => 'primary'],
+                    ['name' => 'Genetika', 'type' => 'secondary'],
+                    ['name' => 'Evolusi', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
+                ],
+                'copy_types' => [
+                    'Physical' => [
+                        'description' => 'Buku bergambar dengan ilustrasi berwarna',
+                        'sources' => [
+                            ['name' => 'Erlangga', 'url' => 'https://www.erlangga.co.id', 'type' => 'publisher', 'shipping_available' => true],
+                            ['name' => 'Perpustakaan Sekolah', 'type' => 'school_library'],
+                        ],
+                    ],
+                ],
+                'licensing_type' => 'Commercial',
+                'sources' => [
+                    ['name' => 'Penerbit Erlangga', 'url' => 'https://www.erlangga.co.id'],
+                ],
+                'twitter_embeds' => [
+                    ['embed_url' => 'https://twitter.com/biologi_sma/status/1234567894', 'keyword' => 'Biologi SMA', 'generated_at' => '2024-05-15T09:10:00Z'],
+                ],
+                'related_posts' => [10, 11],
+                'community_id' => 'sains-sma',
+            ],
+            [
+                'title' => 'Sejarah Indonesia SMA Kelas XI',
+                'author' => 'Tim Kemdikbud',
+                'cover' => 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop',
+                'rating' => 4.0,
+                'description' => 'Buku sejarah Indonesia yang membahas perjuangan kemerdekaan, masa orde lama, orde baru, dan reformasi. Dilengkapi dengan foto-foto bersejarah dan dokumen penting.',
+                'year_edition' => 'Kurikulum Merdeka 2024',
+                'total_bookmarked' => 1320,
+                'tags' => [
+                    ['name' => 'Sejarah', 'type' => 'primary'],
+                    ['name' => 'Indonesia', 'type' => 'secondary'],
+                    ['name' => 'Kemerdekaan', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
+                ],
+                'copy_types' => [
+                    'Physical' => [
+                        'description' => 'Buku resmi Kemdikbud dengan foto bersejarah',
+                        'sources' => [
+                            ['name' => 'BSE Kemdikbud', 'url' => 'https://bse.kemdikbud.go.id', 'type' => 'government_publisher'],
+                            ['name' => 'Museum Nasional', 'type' => 'museum_library'],
                         ],
                     ],
                     'Digital' => [
-                        'description' => 'Free online HTML version',
+                        'description' => 'E-book gratis dari Kemdikbud',
                         'sources' => [
-                            ['name' => 'Google SRE', 'url' => 'https://sre.google/sre-book/table-of-contents/', 'type' => 'open_access'],
+                            ['name' => 'BSE Digital', 'url' => 'https://bse.kemdikbud.go.id', 'type' => 'free_access'],
                         ],
                     ],
                 ],
-                'licensing_type' => 'Mixed (Free & Commercial)',
+                'licensing_type' => 'Open Educational Resource',
                 'sources' => [
-                    ['name' => "O'Reilly Media", 'url' => 'https://www.oreilly.com/library/view/site-reliability-engineering/9781491929117/'],
+                    ['name' => 'Kementerian Pendidikan dan Kebudayaan', 'url' => 'https://www.kemdikbud.go.id'],
                 ],
                 'twitter_embeds' => [
-                    ['embed_url' => 'https://twitter.com/ask_sre/status/1345678901', 'keyword' => 'SRE Book', 'generated_at' => '2024-02-21T16:10:00Z'],
+                    ['embed_url' => 'https://twitter.com/kemdikbud_ri/status/1234567895', 'keyword' => 'Sejarah Indonesia', 'generated_at' => '2024-08-17T12:00:00Z'],
                 ],
-                'related_posts' => [24, 25, 26],
-                'community_id' => 'sre-lab',
+                'related_posts' => [12, 13],
+                'community_id' => 'sejarah-indonesia',
             ],
+            [
+                'title' => 'Geografi SMA Kelas X',
+                'author' => 'Wardiyatmoko',
+                'cover' => 'https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=600&fit=crop',
+                'rating' => 4.2,
+                'description' => 'Buku geografi yang membahas konsep dasar geografi, litosfer, atmosfer, hidrosfer, dan biosfer. Dilengkapi dengan peta dan diagram yang informatif.',
+                'year_edition' => 'Edisi 2024',
+                'total_bookmarked' => 1580,
+                'tags' => [
+                    ['name' => 'Geografi', 'type' => 'primary'],
+                    ['name' => 'Litosfer', 'type' => 'secondary'],
+                    ['name' => 'Atmosfer', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
+                ],
+                'copy_types' => [
+                    'Physical' => [
+                        'description' => 'Buku dengan peta dan atlas lengkap',
+                        'sources' => [
+                            ['name' => 'Erlangga', 'url' => 'https://www.erlangga.co.id', 'type' => 'publisher', 'shipping_available' => true],
+                            ['name' => 'Bakosurtanal', 'type' => 'government_mapping_agency'],
+                        ],
+                    ],
+                ],
+                'licensing_type' => 'Commercial',
+                'sources' => [
+                    ['name' => 'Penerbit Erlangga', 'url' => 'https://www.erlangga.co.id'],
+                ],
+                'twitter_embeds' => [
+                    ['embed_url' => 'https://twitter.com/geografi_sma/status/1234567896', 'keyword' => 'Geografi SMA', 'generated_at' => '2024-04-20T15:30:00Z'],
+                ],
+                'related_posts' => [14, 15],
+                'community_id' => 'geografi-sma',
+            ],
+            [
+                'title' => 'Ekonomi SMA Kelas XI',
+                'author' => 'Alam S.',
+                'cover' => 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=600&fit=crop',
+                'rating' => 4.1,
+                'description' => 'Buku ekonomi yang membahas konsep dasar ekonomi, pasar, uang dan perbankan, serta kebijakan ekonomi. Dilengkapi dengan studi kasus ekonomi Indonesia.',
+                'year_edition' => 'Kurikulum 2013 Revisi 2024',
+                'total_bookmarked' => 1250,
+                'tags' => [
+                    ['name' => 'Ekonomi', 'type' => 'primary'],
+                    ['name' => 'Pasar', 'type' => 'secondary'],
+                    ['name' => 'Perbankan', 'type' => 'secondary'],
+                    ['name' => 'SMA', 'type' => 'secondary'],
+                ],
+                'copy_types' => [
+                    'Physical' => [
+                        'description' => 'Buku dengan grafik dan tabel ekonomi',
+                        'sources' => [
+                            ['name' => 'Esis', 'url' => 'https://www.esis.co.id', 'type' => 'publisher', 'shipping_available' => true],
+                            ['name' => 'Bank Indonesia Learning Center', 'type' => 'central_bank_library'],
+                        ],
+                    ],
+                ],
+                'licensing_type' => 'Commercial',
+                'sources' => [
+                    ['name' => 'Penerbit Esis', 'url' => 'https://www.esis.co.id'],
+                ],
+                'twitter_embeds' => [
+                    ['embed_url' => 'https://twitter.com/ekonomi_sma/status/1234567897', 'keyword' => 'Ekonomi SMA', 'generated_at' => '2024-03-10T13:45:00Z'],
+                ],
+                'related_posts' => [16, 17],
+                'community_id' => 'ekonomi-sma',
+            ],
+
         ];
 
         foreach ($literatures as $literatureData) {
