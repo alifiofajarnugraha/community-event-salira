@@ -1,0 +1,35 @@
+services:
+  app:
+    build:
+      context: .
+      target: app
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - app-net
+    volumes:
+      - app-storage:/var/www/html/storage
+
+  web:
+    build:
+      context: .
+      target: web
+    container_name: aksara-external-web
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - app-net
+      - web-gateway
+    volumes:
+      - app-storage:/var/www/html/storage:ro
+
+networks:
+  app-net:
+    driver: bridge
+  web-gateway:
+    external: true
+
+volumes:
+  app-storage:
